@@ -11,7 +11,6 @@
 
 <summary> Soal Tugas 7 </summary>
 
-<details>
 
 # Pertanyaan: 
 
@@ -83,5 +82,3 @@
                         content: Text("Kamu telah menekan tombol ${item.name}!")));
                 },
         ```
-
-</details>
