@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:angkringan_tok_dalang/menu.dart';
+import 'package:angkringan_tok_dalang/screens/menu.dart';
 
 void main() {
   runApp(const MyApp());
