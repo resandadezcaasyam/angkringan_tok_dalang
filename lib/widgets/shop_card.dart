@@ -1,5 +1,5 @@
 import 'package:angkringan_tok_dalang/screens/menu.dart';
-import 'package:angkringan_tok_dalang/screens/product_list.dart';
+import 'package:angkringan_tok_dalang/screens/list_product.dart';
 import 'package:angkringan_tok_dalang/screens/shoplist_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -29,7 +29,7 @@ class ShopCard extends StatelessWidget {
               MaterialPageRoute(builder: (context) => const ShopFormPage()));
           } else if (item.name == "Lihat Pesanan") {
             Navigator.push(context,
-              MaterialPageRoute(builder: (context) => ProductListWidget()));
+              MaterialPageRoute(builder: (context) => const ProductPage()));
           } else if (item.name == "Logout") {
             SystemNavigator.pop();
           }

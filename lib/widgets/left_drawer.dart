@@ -1,5 +1,5 @@
 
-import 'package:angkringan_tok_dalang/screens/product_list.dart';
+import 'package:angkringan_tok_dalang/screens/list_product.dart';
 import 'package:flutter/material.dart';
 import 'package:angkringan_tok_dalang/screens/menu.dart';
 // TODO: Impor halaman ShopFormPage jika sudah dibuat
@@ -70,21 +70,16 @@ class LeftDrawer extends StatelessWidget {
                     ));
             },
           ),
-            ListTile(
-              leading: const Icon(Icons.list_rounded),
-              title: const Text('Lihat Pesanan'),
-              // Bagian redirection ke ShopFormPage
+          ListTile(
+              leading: const Icon(Icons.shopping_basket),
+              title: const Text('Daftar Produk'),
               onTap: () {
-                /*
-                TODO: Buatlah routing ke ShopFormPage di sini,
-                setelah halaman ShopFormPage sudah dibuat.
-                */
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ProductListWidget(), //Tambah Disi
-                    ));
-            },
+                  // Route menu ke halaman produk
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ProductPage()),
+                  );
+              },
           ),
         ],
       ),
