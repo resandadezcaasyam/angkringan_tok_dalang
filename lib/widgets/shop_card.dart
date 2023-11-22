@@ -28,15 +28,16 @@ class ShopCard extends StatelessWidget {
                 content: Text("Kamu telah menekan tombol ${item.name}!")));
 
           // Navigate ke route yang sesuai (tergantung jenis tombol)
-          if (item.name == "Tambah Item") {
+          if (item.name == "Tambah Pesanan") {
             Navigator.push(context,
             MaterialPageRoute(builder: (context) => const ShopFormPage()));
-          } else if (item.name == "Lihat Item") {
+          } else if (item.name == "Lihat Pesanan") {
             Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const ProductPage()));
+            MaterialPageRoute(builder: (context) => const ItemPage()));
           } else if (item.name == "Logout") {
               final response = await request.logout(
                   "https://resanda-dezca-tugas.pbp.cs.ui.ac.id/auth/logout/");
+                  // "http://localhost:8000/auth/logout/");
               String message = response["message"];
               if (response['status']) {
                 String uname = response["username"];
